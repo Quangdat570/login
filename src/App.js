@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Login from "./Login";
+import Home from "./Home";
+import { RequireToken } from "./Auth";
+import Detail from "./Detail";
+import Landing from "./Landing";
+
+
+
+
+
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className ="App">
+    <Routes>
+     
+      <Route path="/" element={<Landing/>}/>
+      <Route path="/login" element = {<Login/>}/>
+      <Route path="/profile" element = {<Home/>}/>
+      <Route path="/products/:id" element={<Detail/>}/>
+      <Route
+      path="/profile"
+      element={
+        <RequireToken>
+          <Landing />
+        </RequireToken>
+      }
+    />
+     
+      
+    </Routes>
+   
     </div>
   );
 }
