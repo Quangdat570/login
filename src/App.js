@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
 import { RequireToken } from "./Auth";
-import Detail from "./Detail";
+
 import Landing from "./Landing";
 
 
@@ -20,7 +20,7 @@ function App() {
       <Route path="/" element={<Landing/>}/>
       <Route path="/login" element = {<Login/>}/>
       <Route path="/profile" element = {<Home/>}/>
-      <Route path="/products/:id" element={<Detail/>}/>
+     
       <Route
       path="/profile"
       element={
