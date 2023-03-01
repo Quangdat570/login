@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import { useNavigate } from "react-router";
-import { Container, Row, Col} from 'react-bootstrap'
-import axios from "axios";
+import { Container} from 'react-bootstrap'
+
 import Table from 'react-bootstrap/Table';
 import { Link } from "react-router-dom";
 import { MdDelete} from 'react-icons/md'
-import { BsPen } from 'react-icons/bs'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './styles/Home.module.css'
 
@@ -15,7 +15,7 @@ import styles from './styles/Home.module.css'
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';

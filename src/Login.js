@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router";
 import { fetchToken, setToken } from "./Auth";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import styles from './styles/Login.module.css'
-import { Container, Row, Col} from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 
 
@@ -54,12 +55,14 @@ export default function Login() {
 
     <>
     <Container className={styles.container_header}>
-        <div>
+        
+    <Link to='/'>
         <div className={styles.icons}>
                     <div className={styles.icon1}></div>
                     <div className={styles.icon2}></div>
                 </div>
-        </div>
+        </Link>
+        
     </Container>
      <div style={{ minHeight: 800, marginTop: 30 }}>
        <div style={{ marginTop: 30 }}>
